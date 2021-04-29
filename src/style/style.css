@@ -1,0 +1,61 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+
+.todo-wrapper, .todos {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-wrapper .input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-wrapper .input-wrapper input {
+  min-width: 30rem;
+  font-size: 24px;
+  padding: 0.5rem;
+}
+
+.todo-wrapper .input-wrapper button {
+  width: 5rem;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+
+.todos {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.todos .todo-item {
+  display: flex;
+  font-size: 20px;
+  width: 37rem;
+  justify-content: space-between;
+}
+
+.todos .todo-item .remove-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
