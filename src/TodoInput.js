@@ -7,10 +7,8 @@ export default function TodoInput({ $app, onClick }) {
   const $todo = document.createElement("div");
   const $todoInput = document.createElement("input");
   const $todoButton = document.createElement("button");
-  $todo.innerHTML = `
-  <div class="todo-wrapper">
-    <div class="input-wrapper"></div>
-  </div>`;
+  $todo.className = "todo-wrapper";
+  $todo.innerHTML = `<div class="input-wrapper"></div>`;
   $app.appendChild($todo);
   $todoInput.placeholder = "할 일";
   $todoButton.innerText = "추가";
@@ -27,13 +25,21 @@ export default function TodoInput({ $app, onClick }) {
 
   $todoInput.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
-      onClick(e.target.value);
-      this.setState("");
+      if (this.state) {
+        onClick(e.target.value);
+        this.setState("");
+        return;
+      }
+      alert("할 일을 입력해주세요!");
     }
   });
 
   $todoButton.addEventListener("click", () => {
-    onClick(this.state);
-    this.setState("");
+    if (this.state) {
+      onClick(this.state);
+      this.setState("");
+      return;
+    }
+    alert("할 일을 입력해주세요!");
   });
 }

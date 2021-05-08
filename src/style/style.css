@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box!important;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 html {
   font-size: 16px;
 }
@@ -7,13 +14,22 @@ body {
 }
 
 header {
-  width: 1440px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 1rem 0;
-  font-size: 36px;
   margin-bottom: 2rem;
+  background: lightgreen;
+}
+
+.inner-header {
+  width: 1440px;
+  color: white;
+  text-align: center;
+}
+
+.inner-header h1 {
+  margin: 1rem 0;
 }
 
 .todo-wrapper, .todos {
@@ -39,6 +55,12 @@ header {
   width: 5rem;
   font-size: 24px;
   margin-left: 1rem;
+  outline: none;
+  border: 0;
+  background-color: lightgreen;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .todos {
@@ -47,15 +69,27 @@ header {
   margin-top: 1rem;
 }
 
-.todos .todo-item {
+.todo-item {
   display: flex;
   font-size: 20px;
   width: 37rem;
   justify-content: space-between;
+  color: black;
+  background-color: white;
+  border: 1px solid lightgreen;
+  border-radius: 2px;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
-.todos .todo-item .remove-btn {
+.todo-item .remove-btn {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.placeholder {
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  margin: 0;
 }
